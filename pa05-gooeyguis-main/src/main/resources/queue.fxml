@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <root>
+      <AnchorPane prefHeight="200" prefWidth="145.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="queue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="162.0" />
+                  <Button fx:id="closeQueue" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0" text="Close">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </root>
+</Scene>

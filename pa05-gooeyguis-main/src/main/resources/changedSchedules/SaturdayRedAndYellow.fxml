@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Scene stylesheets="@../styleRed.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <root>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="202.0" prefWidth="1226.0">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.1670751633986928" opacity="0.95" pickOnBounds="false" prefHeight="202.0" prefWidth="1226.0">
+               <items>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ListView fx:id="queue" prefHeight="169.0" prefWidth="100.0" />
+                        <Button fx:id="closeQueue" mnemonicParsing="false" prefHeight="20.0" prefWidth="40.0" text="Close">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="1014.0" style="-fx-background-color: #F9E795; -fx-border-color: #000000;">
+                     <children>
+                        <HBox prefHeight="29.0" prefWidth="1012.0" style="-fx-background-color: #F96167;">
+                           <children>
+                              <Button fx:id="queueButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="171.0" text="Task Queue" />
+                              <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="29.0" prefWidth="1014.0" style="-fx-background-color: #F96167;" text="🅆🄴🄴🄺🄻🅈 🄲🄰🄻🄴🄽🄳🄰🅁">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="358.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="699.0">
+                                 <children>
+                                    <Label fx:id="maxTaskCount" text="Max Daily Tasks: N/A">
+                                       <font>
+                                          <Font name="Tsukushi A Round Gothic Regular" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="blankSpace" text="            " />
+                                    <Label fx:id="maxEventCount" text="Max Daily Events: N/A">
+                                       <font>
+                                          <Font name="Tsukushi A Round Gothic Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="353.0">
+                                       <children>
+                                          <Label fx:id="weekTitle">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="27.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <MenuButton fx:id="themeButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="84.0" style="-fx-background-color: #008080;" text="Load">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="royal" mnemonicParsing="false" style="-fx-background-color: #234E70;" text="Royal">
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="1.0" green="0.7921568751335144" blue="0.27450981736183167" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="redYellow" mnemonicParsing="false" style="-fx-background-color: #008080;" text="Red/Yellow">
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="0.6152019002375297">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="1.0" green="0.30949074029922485" blue="0.27314814925193787" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.006711409395973154">
+                                                         <color>
+                                                            <Color red="1.0" green="0.30949074029922485" blue="0.27314814925193787" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.4261744966442953">
+                                                         <color>
+                                                            <Color red="1.0" green="0.30949074029922485" blue="0.27314814925193787" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.44966442953020136">
+                                                         <color>
+                                                            <Color red="0.9605262875556946" green="0.9184291958808899" blue="0.32906919717788696" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.9605262875556946" green="0.9184291958808899" blue="0.32906919717788696" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="pinkBlue" mnemonicParsing="false" style="-fx-background-color: #CBC3E3;" text="Pink/Blue">
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="0.6152019002375297">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.9843137264251709" green="0.9176470637321472" blue="0.9215686321258545" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.44630872483221445">
+                                                         <color>
+                                                            <Color red="0.9843137264251709" green="0.9176470637321472" blue="0.9215686321258545" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.4563758389261745">
+                                                         <color>
+                                                            <Color red="0.9843137264251709" green="0.9176470637321472" blue="0.9215686321258545" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.4697986577181208">
+                                                         <color>
+                                                            <Color red="0.9843137264251709" green="0.9176470637321472" blue="0.9215686321258545" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.47651006711409377">
+                                                         <color>
+                                                            <Color red="0.9843137264251709" green="0.9176470637321472" blue="0.9215686321258545" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.4806842363725651">
+                                                         <color>
+                                                            <Color red="0.9843137264251709" green="0.9176470637321472" blue="0.9215686321258545" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.4999999999999998">
+                                                         <color>
+                                                            <Color red="0.9843137264251709" green="0.9176470637321472" blue="0.9215686321258545" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.5134228187919461">
+                                                         <color>
+                                                            <Color red="0.13559941947460175" green="0.17730262875556946" blue="0.5526315569877625" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="0.9630872483221476">
+                                                         <color>
+                                                            <Color red="0.13559941947460175" green="0.17730262875556946" blue="0.5526315569877625" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.13559941947460175" green="0.17730262875556946" blue="0.5526315569877625" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                              </MenuButton>
+                              <Button fx:id="saveFile" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" style="-fx-background-color: #008080;" text="Save" />
+                              <ComboBox fx:id="comboC" prefHeight="30.0" prefWidth="79.0" promptText="Open" style="-fx-background-color: #008080;" />
+                              <MenuButton fx:id="maxButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" style="-fx-background-color: #F5F5DC;" text="Set">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="sunday" mnemonicParsing="false" text="Set First as Sunday" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="monday" mnemonicParsing="false" text="Set First as Monday" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="tuesday" mnemonicParsing="false" text="Set First as Tuesday" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="wednesday" mnemonicParsing="false" text="Set First as Wednesday" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="thursday" mnemonicParsing="false" text="Set First as Thursday" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="friday" mnemonicParsing="false" text="Set First as Friday" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="saturday" mnemonicParsing="false" text="Set First as Saturday" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="title" mnemonicParsing="false" text="Title" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="maxT" mnemonicParsing="false" text="Max Tasks" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="maxE" mnemonicParsing="false" text="Max Events" />
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                              </MenuButton>
+                              <MenuButton fx:id="newButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" style="-fx-background-color: #008080;" text="New">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="task" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="60.0" text="Task" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="event" mnemonicParsing="false" prefWidth="60.0" text="Event" />
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                              </MenuButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="125.0" prefWidth="400.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="125.0" prefWidth="192.0">
+                                 <children>
+                                    <Label text="Week Statistics">
+                                       <font>
+                                          <Font name="Tsukushi A Round Gothic Regular" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="totalEvents" text="Total Events: ">
+                                       <font>
+                                          <Font name="Tsukushi A Round Gothic Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="totalTasks" text="Total Tasks: ">
+                                       <font>
+                                          <Font name="Tsukushi A Round Gothic Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="tasksComplete" text="Tasks Completed: ">
+                                       <font>
+                                          <Font name="Tsukushi A Round Gothic Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="73.0" prefWidth="918.0">
+                                 <children>
+                                    <HBox prefHeight="22.0" prefWidth="918.0">
+                                       <children>
+                                          <ProgressBar fx:id="satProg" prefHeight="12.0" prefWidth="132.0" progress="0.0" />
+                                          <ProgressBar fx:id="sunProg" prefHeight="12.0" prefWidth="129.0" progress="0.0" />
+                                          <ProgressBar fx:id="monProg" prefHeight="12.0" prefWidth="132.0" progress="0.0" />
+                                          <ProgressBar fx:id="tuesProg" prefHeight="12.0" prefWidth="131.0" progress="0.0" />
+                                          <ProgressBar fx:id="wedProg" prefHeight="12.0" prefWidth="132.0" progress="0.0" />
+                                          <ProgressBar fx:id="thursProg" prefHeight="12.0" prefWidth="133.0" progress="0.0" />
+                                          <ProgressBar fx:id="friProg" prefHeight="12.0" prefWidth="129.0" progress="0.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="870.0">
+                                       <children>
+                                          <Label fx:id="sat" alignment="CENTER" prefWidth="144.85" style="-fx-border-color: #000000;" text=" Saturday ">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sun" alignment="CENTER" prefHeight="24.0" prefWidth="143.0" style="-fx-border-color: #000000;" text=" Sunday ">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="mon" alignment="CENTER" blendMode="SRC_ATOP" prefWidth="144.85" style="-fx-border-color: #000000;" text="Monday ">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="tues" alignment="CENTER" prefWidth="144.85" style="-fx-border-color: #000000;" text=" Tuesday ">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="wed" alignment="CENTER" prefWidth="144.85" style="-fx-border-color: #000000;" text=" Wednesday ">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="thurs" alignment="CENTER" prefWidth="144.85" style="-fx-border-color: #000000;" text=" Thursday ">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="fri" alignment="CENTER" prefWidth="144.85" style="-fx-border-color: #000000;" text=" Friday ">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="listBox" prefHeight="81.0" prefWidth="870.0">
+                                       <children>
+                                          <ListView fx:id="satView" prefHeight="100.0" prefWidth="144.85" style="-fx-border-color: #000000; -fx-background-color: #F96167;">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </ListView>
+                                          <ListView fx:id="sunView" prefHeight="100.0" prefWidth="143.0" style="-fx-border-color: #000000; -fx-background-color: #F96167;">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </ListView>
+                                          <ListView fx:id="monView" prefHeight="100.0" prefWidth="144.85" style="-fx-border-color: #000000; -fx-background-color: #F96167;">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </ListView>
+                                          <ListView fx:id="tuesView" prefHeight="100.0" prefWidth="144.85" style="-fx-border-color: #000000; -fx-background-color: #F96167;">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </ListView>
+                                          <ListView fx:id="wedView" prefHeight="100.0" prefWidth="144.85" style="-fx-border-color: #000000; -fx-background-color: #F96167;">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </ListView>
+                                          <ListView fx:id="thursView" prefHeight="100.0" prefWidth="144.85" style="-fx-border-color: #000000; -fx-background-color: #F96167;">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </ListView>
+                                          <ListView fx:id="friView" prefHeight="100.0" prefWidth="144.85" style="-fx-border-color: #000000; -fx-background-color: #F96167;">
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </ListView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="0.0" prefWidth="918.0">
+                                       <children>
+                                          <Label fx:id="satTasks" alignment="CENTER" prefHeight="15.0" prefWidth="146.0" text="Uncompleted Tasks: 0">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sunTasks" alignment="CENTER" prefHeight="16.0" prefWidth="142.0" text="Uncompleted Tasks: 0">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="monTasks" alignment="CENTER" prefHeight="16.0" prefWidth="144.0" text="Uncompleted Tasks: 0">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="tuesTasks" alignment="CENTER" prefHeight="15.0" prefWidth="145.0" text="Uncompleted Tasks: 0">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="wedTasks" alignment="CENTER" prefHeight="14.0" prefWidth="145.0" text="Uncompleted Tasks: 0">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="thursTasks" alignment="CENTER" prefHeight="16.0" prefWidth="145.0" text="Uncompleted Tasks: 0">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="friTasks" alignment="CENTER" prefHeight="15.0" prefWidth="140.0" text="Uncompleted Tasks: 0">
+                                             <font>
+                                                <Font name="Tsukushi A Round Gothic Regular" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </root>
+</Scene>

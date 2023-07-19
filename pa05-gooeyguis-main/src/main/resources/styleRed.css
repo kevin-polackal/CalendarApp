@@ -1,0 +1,6 @@
+.list-cell:odd {
+    -fx-background-color:  #F96167;
+}
+.list-cell:even {
+    -fx-background-color:  #F96167;
+}
